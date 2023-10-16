@@ -1,4 +1,4 @@
-# Problem-Solving-with-Data-Structures-and-Algorithms
+# Problem-Solving-with-Data-Structures-and-Algorithms-with-Python
 
 ### Don't forget to give this repo a Star :star:
 
