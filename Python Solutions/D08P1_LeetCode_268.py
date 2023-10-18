@@ -3,8 +3,5 @@
 #way_1
 class Solution:
   def missingNumber(self, nums: List[int]) -> int:
-      n = len(nums)
-      sum_n = []
-      for i in nums:
-        sum_n.append(i)
-      return ((n*(n+1)//2)-sum(sum_n))
+    n = len(nums)
+    return ((n*(n+1)//2)-sum(nums))
