@@ -2,9 +2,9 @@
 #Way_1
 class Solution:
     def subtractProductAndSum(self, n: int) -> int:
-        prod = 1
-        sum1 = 0
+        p = 1
+        s = 0
         for digit in str(n) :
-            sum1 += int(digit)           #sum1 = sum1 + int(digit)
-            prod *= int(digit)           #prod = prod * int(digit)
-        return (prod-sum1)
+            s += int(digit)           #s = s + int(digit)
+            p *= int(digit)           #p = p * int(digit)
+        return (p - s)
