@@ -7,4 +7,4 @@ class Solution:
             output[indices[i]] = s[i]  
             # Assign the character at indices[i] position in 'ans' string
         return ''.join(output)  
-        # Convert list of characters to string
+        # Convert list of characters to string.
