@@ -8,7 +8,6 @@ class Solution:
             val=len(str(nums[i]))
             if(val%2==0):
                 count+=1
-                
         return count
             
             
