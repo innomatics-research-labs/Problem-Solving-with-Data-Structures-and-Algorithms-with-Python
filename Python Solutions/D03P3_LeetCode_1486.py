@@ -1,10 +1,9 @@
-# Python3 code coming soon
-
-
 class Solution:
     def xorOperation(self, n: int, start: int) -> int:
-        ans = temp = start
-        for i in range(1, n):
-            temp += 2  
-            ans = ans ^ temp
-        return ans
+        ans=[]
+        a=0
+        for i in range(0,n):
+            ans.append(start+i*2)
+        for x in ans:
+            a=a^x
+        return a
