@@ -1,8 +1,7 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> List[int]:
-        l=[]
+        ans=[]
         for i in nums:
             if nums.count(i)==1:
-                l.append(i)
-        return l
-        
+                ans.append(i)
+        return ans

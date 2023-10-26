@@ -1,11 +1,16 @@
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
         count=0
-        for  i in range (len(rating)):
-            for j in range(i+1,len(rating)):
-                for k in range(j+1,len(rating)):
-                    if (rating[i] < rating[j] < rating[k]) or (rating[i] > rating[j] > rating[k]):
-                        count+=1
+        n=len(rating)
+        inc,dec=[0]*(n),[0]*n
+        for i in range(n):
+            for j in range(i):
+                if rating[i]>rating[j]:
+                    inc[i]+=1
+                    count+=inc[j]
+                elif rating[i]<rating[j]:
+                    dec[i]+=1
+                    count+=dec[j]
         return count
                     
                     

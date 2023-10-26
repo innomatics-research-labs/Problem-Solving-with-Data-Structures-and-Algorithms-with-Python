@@ -1,6 +1,6 @@
 # Problem-Solving-with-Data-Structures-and-Algorithms-with-Python
 
-### Don't forget to give this repo a Star :star:
+### Don't forget to give this repo a Star :star: and [follow Innomatics Research Labs](https://github.com/innomatics-research-labs) 
 
 
 | Day | Problem Number | Problem Name | Available Solutions | Topic |
