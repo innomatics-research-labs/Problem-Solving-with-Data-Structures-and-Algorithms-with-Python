@@ -10,5 +10,4 @@ class Solution:
         for val in d.values():
             val=(val*(val-1))//2
             total_pairs+=val
-        return total_pairs
-        
+        return total_pairs    
