@@ -1,26 +1,17 @@
-#Given n non-negative integers representing an elevation map where the width of each bar is 1, 
-#compute how much water it is able to trap after raining.
-
 class Solution:
-  def trap(self, height: List[int]) -> int:
-      
-      water = 0
-      index = 0
-      stack = []
-      
-      while index < len(height):
-          while len(stack) != 0 and height[index] > height[stack[len(stack) - 1]]:
-              top = stack.pop()
-              
-              if len(stack) == 0:
-                  break
-              
-              width = index - stack[len(stack) - 1] - 1
-              min_height = min(height[index], height[stack[len(stack) - 1]])
-              min_height -= height[top]
-              
-              area = width * min_height
-              water += area
+    def trap(self, height: List[int]) -> int:
+        n=len(height)
+        left,right=[0]*n,[0]*n
+        water=0
+        left[0]=height[0]
+        for i in range(n):
+            left[i]=max(left[i-1],height[i])
+        right[n-1]=height[n-1]
+        for i in range(n-2,-1,-1):
+            right[i]=max(right[i+1],height[i])
+        for i in range(0,n):
+            water+=min(left[i],right[i])-height[i]
+        return water
           
           stack.append(index)
           index += 1
