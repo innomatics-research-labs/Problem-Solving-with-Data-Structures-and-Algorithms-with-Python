@@ -1,13 +1,13 @@
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
-        d={}
-        for num in nums:
-            if num in d:
-                d[num]+=1
+        dic={}
+        pairs=0
+        for i in nums:
+            if i in dic:
+                dic[i]+=1
             else:
-                d[num]=1
-        total_pairs=0
-        for val in d.values():
-            val=(val*(val-1))//2
-            total_pairs+=val
-        return total_pairs    
+                dic[i]=1
+        for key,val in dic.items():
+            if val>=2:
+                pairs+=(val*(val-1))//2
+        return pairs
