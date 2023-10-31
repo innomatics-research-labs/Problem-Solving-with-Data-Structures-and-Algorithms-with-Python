@@ -1,9 +1,9 @@
-# Count Negative Numbers in a Sorted Matrix
-class Solution(object):
-    def countNegatives(self, grid):
-        count=0
-        for a in range(len(grid)):
-            for b in range(len(grid[a])):
-                if grid[a][b] < 0:
-                    count+=1
-        return count
+class Solution:
+    def countNegatives(self, grid: List[List[int]]) -> int:
+        sum=0
+
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if grid[i][j]<0:
+                    sum+=1
+        return sum
