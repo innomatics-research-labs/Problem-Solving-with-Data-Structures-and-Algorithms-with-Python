@@ -1,6 +1,11 @@
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
-        nums.sort()
-        for i  in range(len(nums)):
-            if nums[i]==nums[i+1]:
-                return nums[i]
+        dic={}
+        for i in nums:
+            if i in dic:
+                dic[i]+=1
+            else:
+                dic[i]=1
+        for key,val in dic.items():
+            if val>1:
+                return key
