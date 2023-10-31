@@ -1,8 +1,8 @@
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
-        l=[]
-        for i in t:
-            l.append(i)
-        for i in s:
-            l.remove(i)
-        return l[0]
+        for char in t:
+            if char not in s:
+                return char
+            else:
+                news=s.replace(char,'',1)
+                s=news
